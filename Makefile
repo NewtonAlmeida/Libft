@@ -3,33 +3,29 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nalmeida <nalmeida@student.42adel.org.a    +#+  +:+       +#+         #
+#    By: nalmeida <nalmeida@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/07/08 15:49:43 by nalmeida          #+#    #+#              #
-#    Updated: 2022/07/08 15:49:43 by nalmeida         ###   ########.fr        #
+#    Created: 2022/07/05 19:03:22 by nalmeida          #+#    #+#              #
+#    Updated: 2022/07/06 19:52:27 by nalmeida         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Library	= libft
-
-files	= ft_isalpha \
-	ft_isdigit \
+files = ft_isalpha \
+	   ft_isdigit \
 
 Compiler	= gcc
 
-CmpFlags	= -Wall -Wextra -Werror
+CmpFlags	= -Wall -Wextra -Werror 
 
-OUTN 	= $(Library).a
+CFILES	= $(files:%=%.c)
 
-CFILES 	= $(files:%=%.c)
+OFILES	= $(files:%=%.o)
 
-OFILES 	= $(files:%= %.o)
-
-NAME 	=	$(OUTN)
+NAME = libft.a
 
 $(NAME):
 	$(Compiler) $(CmpFlags) -c $(CFILES) 
-	ar -rc $(OUTN) $(OFILES)
+	ar rcs $(NAME) $(OFILES)
 
 all: $(NAME)
 
@@ -41,4 +37,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all, clean, fclean, re
+.PHONY: all clean fclean re
