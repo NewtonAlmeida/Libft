@@ -15,8 +15,12 @@
 # include<stdlib.h>
 # include<unistd.h>
 
-int	ft_isalnum(int i);
-int	ft_isalpha(int i);
-int	ft_isdigit(int i);
+int ft_isprint(int i);
+int ft_isalnum(int i);
+int ft_isalpha(int i);
+int ft_isdigit(int i);
+int ft_isascii(int i);
+void    *ft_memset(void *b, int c, size_t len);
+int ft_strlen(const char *str);
 
 #endif

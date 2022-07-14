@@ -19,3 +19,5 @@ int	ft_isalnum(int i)
 		return (1);
 	return (0);
 }
+
+//Checa se o (i) e um numero.

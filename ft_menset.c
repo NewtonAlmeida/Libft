@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_menset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nalmeida <nalmeida@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nalmeida <nalmeida@student.42adel.org.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 18:55:40 by nalmeida          #+#    #+#             */
-/*   Updated: 2022/07/12 18:32:59 by nalmeida         ###   ########.fr       */
+/*   Created: 2022/07/14 12:03:15 by nalmeida          #+#    #+#             */
+/*   Updated: 2022/07/14 12:03:15 by nalmeida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int i)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	if (('a' <= i && i <= 'z') || ('A' <= i && i <= 'Z'))
-		return (1);
-	return (0);
-}
+	char	*p;
 
-//checa se e uma letra
+	p = (char *)b;
+	while (len > 0)
+	{
+		p[len - 1] = c;
+		len--;
+	}
+	return (b);
+}
+//Pega um inteiro(c) e coloca (len) vezes na string (b)

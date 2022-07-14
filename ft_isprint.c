@@ -18,3 +18,5 @@ int ft_isprint(int i)
         return (1);
     return (0);
 }
+
+//Checa se o (i) e printavel. 

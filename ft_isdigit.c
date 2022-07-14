@@ -18,3 +18,5 @@ int	ft_isdigit(int i)
 		return (1);
 	return (0);
 }
+
+//checa se o (i) e um digito, de 0 a 9. 

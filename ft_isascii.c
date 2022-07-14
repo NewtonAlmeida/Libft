@@ -18,3 +18,5 @@ int ft_isascii(int i)
         return (1);
         return (0);
 }
+
+//checa se (i) pertence a tabela asci
