@@ -12,6 +12,17 @@
 
 files = ft_isalpha \
 	   ft_isdigit \
+	   ft_bzero. \
+	   ft_isalnum \
+	   ft_isascii \
+	   ft_isprint \
+	   ft_memcpy \
+	   ft_memmove \
+	   ft_menset \
+	   ft_strlcat \
+	   ft_strlen \
+	   ft_toupper \
+
 
 Compiler	= gcc
 
