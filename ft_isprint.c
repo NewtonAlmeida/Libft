@@ -6,17 +6,16 @@
 /*   By: nalmeida <nalmeida@student.42adel.org.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 20:24:27 by nalmeida          #+#    #+#             */
-/*   Updated: 2022/07/13 20:24:27 by nalmeida         ###   ########.fr       */
+/*   Updated: 2022/08/04 14:21:08 by nalmeida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int i)
+int	ft_isprint(int i)
 {
-    if(i >= 32 && i <= 126)
-        return (1);
-    return (0);
+	if (i >= 32 && i <= 126)
+		return (1);
+	return (0);
 }
-
-//Checa se o (i) e printavel. 
+//Checa se o (i) e printavee. 

@@ -6,7 +6,7 @@
 /*   By: nalmeida <nalmeida@student.42adel.org.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 11:22:32 by nalmeida          #+#    #+#             */
-/*   Updated: 2022/07/15 11:22:32 by nalmeida         ###   ########.fr       */
+/*   Updated: 2022/08/04 14:24:21 by nalmeida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,4 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	}
 	return (s1);
 }
-
-
 //copia o conteudo da segunda para a primeira.
