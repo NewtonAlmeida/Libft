@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nalmeida <nalmeida@student.42adel.org.a    +#+  +:+       +#+        */
+/*   By: nalmeida <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 18:42:05 by nalmeida          #+#    #+#             */
-/*   Updated: 2022/08/04 20:00:01 by nalmeida         ###   ########.fr       */
+/*   Created: 2022/08/04 17:08:13 by nalmeida          #+#    #+#             */
+/*   Updated: 2022/08/04 17:09:14 by nalmeida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int	ft_strncmp(const char *s1, char *s2, size_t n)
 {
-	unsigned int	counter;
-
-	if (s && f)
+	while (*s1 != '\0' && *s1 == *s2 && n > 0)
 	{
-		counter = 0;
-		while (s[counter])
-		{
-			f(counter, &s[counter]);
-			counter++;
-		}
+		s1++;
+		s2++;
+		n--;
 	}
+	if (n == 0)
+		return (0);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }

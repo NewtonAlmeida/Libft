@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nalmeida <nalmeida@student.42adel.org.a    +#+  +:+       +#+        */
+/*   By: nalmeida <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 18:42:05 by nalmeida          #+#    #+#             */
-/*   Updated: 2022/08/04 20:00:01 by nalmeida         ###   ########.fr       */
+/*   Created: 2022/08/04 17:04:42 by nalmeida          #+#    #+#             */
+/*   Updated: 2022/08/04 17:04:50 by nalmeida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	counter;
+	char	*str1;
+	char	*str2;
+	size_t	i;
 
-	if (s && f)
+	i = 0;
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	while (i < n)
 	{
-		counter = 0;
-		while (s[counter])
-		{
-			f(counter, &s[counter]);
-			counter++;
-		}
+		if (str1[i] != str2[i])
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		i++;
 	}
+	return (0);
 }

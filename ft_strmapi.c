@@ -6,7 +6,7 @@
 /*   By: nalmeida <nalmeida@student.42adel.org.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 18:41:15 by nalmeida          #+#    #+#             */
-/*   Updated: 2022/08/04 15:26:02 by nalmeida         ###   ########.fr       */
+/*   Updated: 2022/08/04 19:58:18 by nalmeida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,22 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
-	char			*str;
+	unsigned int	counter;
+	char			*str_cpy;
+	unsigned int	s_len;
 
-	i = 0;
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
-	if (str == NULL)
+	if (!s)
 		return (NULL);
-	while (s[i] != '\0')
+	counter = 0;
+	s_len = ft_strlen(s) + 1;
+	str_cpy = (char *) malloc(sizeof(char) * s_len);
+	if (!str_cpy)
+		return (NULL);
+	while (s[counter])
 	{
-		str[i] = f(i, s[i]);
-		i++;
+		str_cpy[counter] = f(counter, s[counter]);
+		counter++;
 	}
-	str[i] = '\0';
-	return (str);
+	str_cpy[counter] = '\0';
+	return (str_cpy);
 }

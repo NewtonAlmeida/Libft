@@ -6,13 +6,13 @@
 /*   By: nalmeida <nalmeida@student.42adel.org.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 11:52:16 by nalmeida          #+#    #+#             */
-/*   Updated: 2022/08/04 15:27:52 by nalmeida         ###   ########.fr       */
+/*   Updated: 2022/08/04 17:42:23 by nalmeida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int i)
+int	ft_tolower(int i)
 {
 	if (i >= 'A' && i <= 'Z')
 		return (i + 32);
